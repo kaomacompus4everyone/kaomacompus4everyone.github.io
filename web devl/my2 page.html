@@ -1,0 +1,369 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my first page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/f0da6971fe.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(42, 121, 121);
+           /* background-color: transparent;*/
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(145, 253, 163, 0.178);
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1 {
+            font-size: 20px;
+            text-decoration: rgb(6, 110, 75);
+        }
+        p {
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            color:firebrick;
+        }
+        aside {
+               width: 50%;
+               padding-left: 10px;
+               margin-left: 10px;
+               float: right;
+               font-style: bold;
+               background-color:yellowgreen transparent;
+             }
+        video {
+            width: 150px;
+            height: 200px;
+        }
+        image {
+            height: 300px;
+            width: 150px;
+        }
+        #div.section2 {
+            background-color: aqua;
+            width: 33.33%;
+            float: right;
+            margin: 0%;
+        }
+        a {
+            color: beige;
+            font-size: 13px;
+        }
+        p6 {
+            color: rgb(90, 13, 214);
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+.card:nth-child(2):before {
+  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+.card:nth-child(3):before {
+  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+.card:nth-child(4):before {
+  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.btn:hover {
+  background-color: #0d0d0d;
+}
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .card:focus-within:before, .card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+    </style>
+</head>
+<body>
+   <!------ <header>
+        <h1>WE ARE LEARNING HTML TAGS</h1>
+       <nav>
+         <ul>
+        <div aling="right">
+                    <i class="fas fa-home"></i>&nbsp;&nbsp;<a href="HOME PAGE">HOME PAGE</a>&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;<a href="LOGIN">LOGIN</a>&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-user-plus"></i>&nbsp;&nbsp;<a href="SING UP">SIGN UP</a>&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-id-card-alt"></i>&nbsp;&nbsp;<a href="contact us.html">CONTACT US</a>&nbsp;&nbsp;&nbs;
+                    <i class="fas fa-address-card"></i>&nbsp;&nbsp;<a href="ABOUT US">ABOUT US</a>&nbsp;&nbsp;&nbsp;
+             </div>
+              </ul>       
+            </nav>
+            <br>
+            <hr>
+        </div>
+    </header>----->
+    <header>
+         <ul>
+          <img src="01_A_LOGO.png" style="width:120px;height:100px;"align="left">&nbsp;<p>KAOMA COMPUS ONLINE CERTIFICATE</p>
+            <div align="right">
+                <i class="fas fa-home"></i>&nbsp;&nbsp;<a href="HOME PAGE">HOME PAGE</a>&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;<a href="LOGIN">LOGIN</a>&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-user-plus"></i>&nbsp;&nbsp;<a href="SING UP">SIGN UP</a>&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-id-card-alt"></i>&nbsp;&nbsp;<a href="contact us.html">CONTACT US</a>&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-address-card"></i>&nbsp;&nbsp;<a href="ABOUT US">ABOUT US</a>&nbsp;&nbsp;&nbsp; 
+        </div>  
+        </ul> 
+        </header>
+        
+<main class="page-content">
+  <div class="card">
+    <div class="content">
+      <h2 class="title">specialization</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">Aroll now</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">certificate</h2>
+      <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+      <button class="btn">Aroll now</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">short courses</h2>
+      <p class="copy">It's the desert you've always dreamed of</p>
+      <button class="btn">Aroll now</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">onver views</h2>
+      <p class="copy">Seriously, straight up, just blast off into outer space today</p>
+      <button class="btn">Aroll Now</button>
+    </div>
+  </div>
+</main>
+    <section1>
+        <h2>our recommanded ccourse</h2>
+        <ol>
+        <li>INTRODUCTION ON HTML AND CSS</li>
+        <li>CSS FOR EVERYONE</li>
+        <li>INTRODUTION ON JAVASCRIPT</li>
+        <li>PROJECT GUIDE</li>
+    </ol>
+    </section1>
+    <aside>
+        <p>
+             WELCOM ALL <br>
+            GOOD PROGRAM FOR ALL STUDENT WHO ARE 
+            INTEREST ON WEB DEVELOPEMENT
+            <br>
+            <h1>The iframe element</h1>
+         <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials">
+        </iframe>
+        </p> 
+    </aside>
+    <div id="section2">
+        <h2>ACHIEVEMENTS</h2>
+        <p>progress in html (100%)&nbsp;&nbsp;&nbsp;&nbsp;<progress value="85" max="100"></progress><br>
+            progress with tags (100%)&nbsp;&nbsp;<progress value="65" max="100"></progress><br>
+            progress life goals (100%)&nbsp;&nbsp;<progress value="58" max="100"></progress>
+        </p>
+    </div>
+    <div id="section3">
+        <h2>more about me</h2>
+        <details>
+            <summary>MY EXPERIENCE</summary>
+            <p>hello everyone am kaoma kiese bievenue am new student, i really like technology and exploration through
+                programming using html 5 ,javaaCript and css.<br>
+                I hope MICHIGAN UNIVERSITY is my rite way to become a full web developer in next 3years .
+            </p>
+        </details>
+        <br>
+        <img src="https://cdn.pixabay.com/photo/2017/12/11/23/52/coding-3013602_960_720.jpg" width="740"
+            height="400"></video>
+    </div>
+
+</body>
+<footer>
+    <a href="http://intro-webdesign.com/"><img src="newlogo.png"></img></a>
+    <address>
+    <ul>
+        <p6> this site has been created by Kaoma kiese Bienvenue</p6>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-whatsapp"
+                style="font-size: 25px;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-twitter-square"
+                style="font-size: 25px;"></i></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-facebook-f"
+                style="font-size: 25px;"></i></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-youtube"
+                style="font-size: 25px;"></i></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p6>contact (+254) 790-34-8950</p6>
+    </ul>
+    </address>
+</footer>
+</html>
+ so proud of myself for starting the year on pursing my goals and career
+IBM you made a really wonderful course.
+it's one of the most informative courses I have ever taken
